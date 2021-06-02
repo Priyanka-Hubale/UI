@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                height: 100%;
+                width: 100%;
+            }
+            #top{
+                background-color: #052046;
+                padding: 20px;
+                max-width: 100%;
+                height: auto;
+            }
+            .nav-right{
+                float:right;
+                width: auto;
+            }   
+            .contactButton{
+                border-radius: 5px;
+                color: rgb(0, 0, 0);
+                /*width: 27%;*/
+                
+            }
+            .contactButton:hover{
+                border-color: rgb(117, 82, 243);
+            }
+            .infoButton{
+                background-color: rgba(233,120,74,1);
+                border-radius: 20px;
+                color: white;
+                border-color: rgba(233,120,74,1);
+                /*width: 34%;*/
+            }
+            .informationButton{
+                background-color: rgba(233,120,74,1);
+                border-radius: 20px;
+                color: white;
+                border-color: rgba(233,120,74,1);
+                /*width: 20%;*/
+                height: 12%;
+            }
+            .formButton{
+                background-color: rgba(233,120,74,1);
+                border-radius: 20px;
+                color: white;
+                border-color: rgba(233,120,74,1);
+                width: 100%;
+                height: 12%;
+            }
+            .txt{ 
+                color:Red;
+                font-weight: bold;
+                font-style: normal;
+                font-family:'Times New Roman', Times, serif;
+                font-size: 55px;
+            }
+            .text{ 
+                color:black;
+            }
+            .con{
+                display: flex;  
+                height: auto;
+                border-style: none;
+                border-radius: 0px;  
+                width:50%;               
+            }
+
+           .form-control {
+                height: calc(1.5em + 0.75rem + 10px);
+                color: #495057;
+                background-color: #FFF4F0;
+                border: 0px solid #ced4da;
+                border-radius: 5px;
+            }
+            .iconimg{
+                height: 25%;
+                width: 10%;
+            }
+            .tab{
+                float: left;
+                width: 30%;
+                padding: 30px;
+                height: auto;
+            }
+            .basicForm{
+                top: -70px;
+                padding: 20px;
+                margin: 20px;
+                left: 20%;
+                background-color: white;
+                box-shadow: 1px 1px 1px 1px orangered;
+                
+            }
+            .informationText{
+                padding: 20px;
+                margin: 20px;
+                width: 50%;
+            }
+            .btn1{
+                background-color: rgba(233,120,74,1);
+                border-radius: 20px;
+                left: 0px;
+                top: 0px;
+                color: white;
+                border-color: rgba(233,120,74,1);
+            }
+            .mid{
+                background-color: white;
+                max-width: 100%;
+            } 
+            a:hover {
+                color: rgba(233,120,74,1);
+                text-decoration: none;
+            }
+            .topBtn{
+                color: #212529;
+            }
+            a#home{
+                padding-right: 2%;
+            }
+            a#about{
+                padding-right: 2%;
+            }
+            a#search{
+                padding-right: 2%;
+            }
+            a#contact{
+                padding-right: 2%;
+            }
+            a#more{
+                padding-right: 2%;
+            }
+            a#bottomlink{
+                color: white;
+            }
+            .toplogo{
+                padding-left: 5%;
+                max-width: 100%;
+                height: auto;
+            }
+           
+            b{
+                font-size: 30px;
+            }
+            .bg{
+                background-image: url("bg.png");
+                opacity: 1.0;
+                width: auto;
+            }
+            .imgs{
+                width: 115%;
+                height: auto;
+            }
+            
+            
+        </style>
+    </head>
+    <body >
+        <div class="container-fluid form-group" id="top">
+            <img id="toplogo" src="logo.png" style="height: 15%; width: 15%;">
+            <div class="nav-right mr-5">
+                <a href="#" class="topBtn" id="home" target="_self"><span class="label-primary form-group text-white" >Home</span></a>
+                <a href="#" class="topBtn" id="about" target="_self"><span class="label-primary form-group text-white">About us</span></a>
+                <a href="#" class="topBtn" id="search" target="_self"><span class="label-primary form-group text-white" >Search Car</span></a>
+                <a href="#" class="topBtn" id="contact" target="_self"><span class="label-primary form-group text-white">Contact Us</span></a>
+                <a href="#" class="topBtn" id="more" target="_self"><span class="label-primary form-group text-white">More</span></a>      
+				<a href="#" class="ml-5 btn btn-light contactButton bg-white">+ Sell Car</a> 
+				<img id="toplogo" style="height: 10%; width: 10%;" class="ml-5" src="profileicon.png">
+            </div><br><br>
+            <div class="con form-group row bg">
+                <div class="col-sm-5 informationText">
+                    <span class="txt">
+                        <p>Power & <span class="text-white">Beauty</span></p>
+                    </span>
+                    <span>
+                        <p class="text-white">This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them? convince them to use your service.</p>
+                    </span>
+                    <button class="btn text-white" style="background-color: red;">Discover Today</button>
+                </div>
+                <div class="col-sm-6">
+                    <img class="imgs" src="img1.png">
+                </div>                         
+            </div>
+        </div>
+        <div class="col-sm-8 form-group basicForm">
+            <span class=" h5 float-left">Find Your Car </span> &nbsp;&nbsp;<span class="text-danger "> Advance Search</span>
+            <span class="float-right text-danger">1260<span class="text-dark"> Available</span></span>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4 p-2">
+                    <span class="text-secondary mb-5"> Car Condition</span><br>
+                    <button type="button" class=" btn btn-light border-secondary text-secondary dropdown-toggle" data-toggle="dropdown">Select Car Type</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-2">
+                    <span class="text-secondary"> Car Condition</span><br>
+                    <button type="button" class="btn btn-light border-secondary text-secondary dropdown-toggle" data-toggle="dropdown">Select Car Type</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-2">
+                    <span class="text-secondary"> Car Condition</span><br>
+                    <button type="button" class="btn btn-light border-secondary text-secondary dropdown-toggle" data-toggle="dropdown">Select Car Type</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-sm-8 p-2">
+                    <span class="text-secondary mb-5 form-label" for="range1"> Price Range (CAD)</span><br>
+                    <div class="range">
+                        <input type="range" class="form-range" id="range1"/>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-2">
+                    <button type="button" class="btn btn-danger text-white">Find A Vehicles</button>
+                </div>
+            </div>
+        </div> 
+        <div class="container-fluid mid form-group row pl-5 pr-5">
+            <div class="tab col-sm-4">
+               <h3>Most Exclusive Vehicless</h3>
+               <p class="text-secondary text-justify">Purus ante parturient magnis condimentum quam sagittis. Enim elementum risus, accumsan hymenaeos lacus. Nascetur ullamcorper libero netus. Aptent eleifend auctor sociosqu libero.</p> 
+            </div>
+            <div class="tab col-sm-4">
+                <h3>Quick Time Responses</h3>
+                <p class="text-secondary text-justify">Purus ante parturient magnis condimentum quam sagittis. Enim elementum risus, accumsan hymenaeos lacus. Nascetur ullamcorper libero netus. Aptent eleifend auctor sociosqu libero.?</p> 
+             </div>
+             <div class="tab col-sm-4">
+                <h3>Everywhere Anytimew</h3>
+                <p class="text-secondary text-justify">Purus ante parturient magnis condimentum quam sagittis. Enim elementum risus, accumsan hymenaeos lacus. Nascetur ullamcorper libero netus. Aptent eleifend auctor sociosqu libero.</p> 
+             </div>
+        </div>
+        <div class="container-fluid mid form-group text-center row pl-5 pr-5">
+            <div class="tab col-sm-4 bg-danger">
+               <img class="iconimg" src="car.png"><br>
+               <h3 class="text-white" >Buy and Sale Vehicle</h3>
+               <p class="text-white text-justify">We buy and sale barand new car and also used car of any brand</p> 
+            </div>
+            <div class="tab col-sm-4 bg-primary">
+                <img class="iconimg" src="rent.png"><br>
+                <h3 class="text-white">Vehicles</h3>
+                <p class="text-white text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p> 
+             </div>
+             <div class="tab col-sm-4 bg-dark">
+                <img class="iconimg" src="set.png"><br>
+                <h3 class=" text-white text-justify">Vehicles Warranty</h3>
+                <p class="text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p> 
+             </div>
+        </div>
+    </body>
+</html>
