@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pizzalogy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+             body{
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                background-color: rgb(237, 255, 213);
+            }
+            a:focus,
+            a:hover,
+            a:active{
+                color: rgb(231, 76, 60);
+            }
+            .head{
+                position: fixed;
+                width: 100%;
+                background-color: rgba(205, 250, 145, 0.966);
+                box-shadow: 0 0 30px rgb(182, 181, 181);
+                z-index: 999;
+            }
+            ol{
+                padding: 0%;
+            }
+            ul{
+                padding: 0%;
+            }
+            a{
+                color: black;
+            }
+            .img1{
+                text-align: center;
+                background-size: 100% 100%;
+                background-image: url("assets/Image/pizza_banner2.jpg");
+                background-clip: content-box;
+                background-repeat: no-repeat;
+                font-weight: bold;
+                color: white;
+                height: 50%;
+                width: 90%;
+                transform: translate(6%, 18%);
+                border-radius: 10px;
+            }
+            .img{
+                height:170px
+            }
+            .circle {
+                width: 120px;
+                height: 120px;
+                line-height: 120px;
+                background-color: rgb(231, 76, 60);
+                border-radius: 50%;
+                color: #fff;
+                font-size: 60px;
+                position: relative;
+                margin: 0 auto 30px;
+            }
+            .circle:before {
+                content: '';
+                position: absolute;
+                width: 140px;
+                height: 140px;
+                left: -10px;
+                top: -10px;
+                border: 2px solid #f2f0ff;
+                border-radius: 50%;
+            }
+            .column{
+                float: left;
+                width: 50%;
+                padding: 5px;
+            }
+            button{
+                width: 30%;
+                margin-top: 5%;
+            }
+            .name { 
+                position: relative; 
+            } 
+            .name input{
+                height: 48px;
+                border: 0;
+                padding-left: 8%;
+                box-shadow: 0 3px 30px #e6f0fa;
+            }
+            .name span{ 
+                position: absolute; 
+                left: 7%; 
+                top: 30%; 
+                color: rgb(231, 76, 60); 
+            }
+            .email { 
+                position: relative; 
+            } 
+            .email input{
+                height: 48px;
+                border: 0;
+                padding-left: 7%;
+                box-shadow: 0 3px 30px #e6f0fa;
+            }
+            .email span{ 
+                position: absolute; 
+                left: 5%; 
+                top: 32%; 
+                color: rgb(231, 76, 60); 
+            } 
+            .email button{
+                position: absolute;
+                right: 15px;
+                top: -28px;
+                background-color: #e74c3c;
+                border: 0;
+                color: #fff;
+                padding: 12px 30px;
+                border-radius: 30px;
+                outline: 0;
+            }
+            .tab{
+                padding: 45% 0;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                margin-left: -115px;
+                margin-top: 56px;
+                -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+                background-color: rgb(242, 248, 226);
+                height: 10%;
+                width: 110%;
+            }
+            .text-block{
+                background: #232323;
+                color: white;
+                padding: 2rem;
+                outline: 1px dashed #f9e2af;
+                outline-offset: -15px;
+            }
+            input.display-7 {
+                border: 1px solid #ddd;
+                background-color: #efefef;
+                padding: 10px 20px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid head">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a href="#"><img src="assets/Image/logo.png" class="w-25"></a>
+                    <button class="navbar-toggler collapse" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <div class="form-group" id="details">
+                            <ul class="navbar-nav ml-auto font-weight-bold">
+                                <li class="nav-item" style="padding: 20px 10px;">
+                                    <a class="nav-link active" href="#Home" data-toggle="collapse" data-target="#Home" data-scroll-nav="0">Home</a>
+                                </li>
+                                <li class="nav-item" style="padding: 20px 10px;">
+                                    <a class="nav-link" href="#Aboutus" data-toggle="collapse" data-target="#Aboutus" data-scroll-nav="1">AboutUs</a>
+                                </li>
+                                <li class="nav-item" style="padding: 20px 10px;">
+                                    <a class="nav-link" href="#Contactus" data-toggle="collapse" data-target="#Contactus" data-scroll-nav="2">Contact</a>
+                                </li>
+                                <li class="nav-item" style="padding: 20px 10px;">
+                                    <a class="nav-link" href="#Gallery" data-toggle="collapse" data-target="#Gallery" data-scroll-nav="3">Gallary</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div style="padding-top: 7%;">
+            <div class="container">
+                <div class="position-relative overflow-hidden img1" style="max-width: 100%; height: 15rem;">
+                    <h1 style="font-size: 4.4rem; font-weight: 400;">Trending This Week</h1>
+                    <h6 class="font-weight-bold" style="font-size: 1.4rem; line-height: 1.5;">Most popular deals in town this week</h6>
+                </div>
+                <div class="container pt-5" id="Aboutus" class="collapse show" data-parent="#details">
+                    <div style="padding: 2% 0%;">
+                        <div class="row">
+                            <div class="col-md-12" style="padding-left: 0%; padding-right: 5%;">
+                                <div class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <h5 class="font-weight-light m-2">About Us</h5>
+                                    <h1 class="dispaly-4 font-weight-bold">Pizzalogy Restaurant</h1>
+                                    <span class="pt-2">Welcome to ‘Pizzalogy’ Restaurant, where we feel proud of our freshly prepared food, warm welcome that promises you a relaxing atmosphere. Our restaurant is the ideal place for those who seek genuine value, whether for a family meal, a relaxing drink or a bite to eat with near and dear.
+                                        ‘ABCD’ Restaurant is owned and operated by the well-trained Chef with over 25 years of culinary experience. All our delicacies are prepared in the traditional style, with fresh imported ingredients and cooked to perfection.
+                                        We have available a wide assortment of best beverages and a wide range of hand selected wines and champagne from around the world that compliments our unique cuisine.
+                                        We cater for your entire family, so you can have a relaxing meal while your kids have lots of fun.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-5 text-center">
+                    <h2><span>Our most popular deals</span></h2>
+                    <div class="row pb-3">
+                        <div class="col-sm-3 col-md-3">
+                            <div class="card" style="background:rgb(245, 255, 234);">
+                                <img src="assets/Image/pizza_fresca.jpg" class="img-fluid" style="height:170px">
+                                <div class="text-center" style="padding: 5% 0%; border: none;">
+                                    <h4 class="text-primary">Fresca Pizza</h4>
+                                    <h3 class="text-danger">₹110.00</h3>
+                                    <button class="btn btn-outline-primary w-50"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3">
+                            <div class="card" style="background:rgb(245, 255, 234);">
+                                <img src="assets/Image/pizza1.jpg" class="img-fluid" style="height:170px">
+                                <div class="text-center" style="padding: 5% 0%; border: none;">
+                                    <h4 class="text-primary">Margherita Pizza</h4>
+                                    <h3 class="text-danger">₹120.00</h3>
+                                    <button class="btn btn-outline-primary w-50"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3">
+                            <div class="card" style="background:rgb(245, 255, 234);">
+                                <img src="assets/Image/pizza4.jpg" class="img-fluid" style="height:170px">
+                                <div class="text-center" style="padding: 5% 0%; border: none;">
+                                    <h4 class="text-primary">Pepperoni Pizza</h4>
+                                    <h3 class="text-danger">₹299.00</h3>
+                                    <button class="btn btn-outline-primary w-50"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3">
+                            <div class="card" style="background:rgb(245, 255, 234);">
+                                <img src="assets/Image/pizza_tandoori_panner.jpg" class="img-fluid" style="height:170px">
+                                <div class="text-center" style="padding: 5% 0%; border: none;">
+                                    <h4 class="text-primary">Peppy Paneer Pizza</h4>
+                                    <h3 class="text-danger">₹120.00</h3>
+                                    <button class="btn btn-outline-primary w-50"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+                <div class="row pt-3">
+                    <div class="col-sm-3 col-md-3">
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/pizza_chicken.jpg" class="img-fluid" style="height:170px">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Chicken Pizza</h4>
+                                <h3 class="text-danger">₹110.00</h3>
+                                <button class="btn btn-outline-primary w-50"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3">
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/pizza_veridiana.jpg" class="img-fluid" style="height:170px">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Veridiana Pizza</h4>
+                                <h3 class="text-danger">₹320.00</h3>
+                                <button class="btn btn-outline-primary w-50"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3">
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/pizza.jpg" class="img-fluid" style="height:170px">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Mashroom Pizza</h4>
+                                <h3 class="text-danger">₹199.00</h3>
+                                <button class="btn btn-outline-primary w-50"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3">
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/pizza2.png" class="img-fluid" style="height:170px">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Cheesy Pizza</h4>
+                                <h3 class="text-danger">₹220.00</h3>
+                                <button class="btn btn-outline-primary w-50"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container form-group" id="Gallery" class="collapse" data-parent="#details" style="padding: 2% 0%;">
+            <div style="padding: 2% 0%;">
+                <h5 class="font-weight-light m-2">Gallery</h5>
+                <h1 class="dispaly-4 font-weight-bold">Indoor &amp; Outdoor</h1>
+                <div class="row pt-2">
+                    <div class="col-md-6" style="padding-left: 0%; padding-right: 5%;">
+                        <div class="text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                            <div class="column">
+                                <img src="assets/Image/1.jpg" class="img-fluid" style="height: 100%;" alt="">
+                            </div>
+                            <div class="column">
+                                <img src="assets/Image/2.jpg" class="img-fluid" style="height: 100%;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-left: 5%; padding-right: 0%;">
+                        <h5 class="font-weight-light">Indoor</h5>
+                        <h1>Seating Arrangement</h1>
+                        <ul class="text-secondary">
+                            <ol><span class="fa fa-check"></span> Leave Adequate Space Between Tables</ol>
+                            <ol><span class="fa fa-check"></span> Make the Wait Station Portable</ol>
+                            <ol><span class="fa fa-check"></span> Try Using Room Dividers &amp; Sit in Every Seat</ol>
+                        </ul>
+                        <h3>₹599.00</h3>
+                        <button class="btn btn-danger rounded">Book a Table</button>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 2% 0%;">
+                <div class="row">
+                    <div class="col-md-6" style="padding-left: 0%; padding-right: 5%;">
+                        <h5 class="font-weight-light">Indoor</h5>
+                        <h1>Dining Arrangement</h1>
+                        <ul class="text-secondary">
+                            <ol><span class="fa fa-check"></span> choosing sandwiches, pizza, or main dishes.</ol>
+                            <ol><span class="fa fa-check"></span> Compare the calories, fat, and sodium </ol>
+                            <ol><span class="fa fa-check"></span> Fill your plate with vegetables and fruit</ol>
+                        </ul>
+                        <h3>₹599.00</h3>
+                        <button class="btn btn-danger rounded">Book a Table</button>
+                    </div>
+                    <div class="col-md-6" style="padding-left: 5%; padding-right: 0%;">
+                        <div class="text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                            <div class="column">
+                                <img src="assets/Image/3.jpg" class="img-fluid" style="height: 100%;" alt="">
+                            </div>
+                            <div class="column">
+                                <img src="assets/Image/4.jpg" class="img-fluid" style="height: 100%;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 2% 0%;">
+                <div class="row">
+                    <div class="col-md-6" style="padding-left: 0%; padding-right: 5%;">
+                        <div class="text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                            <div class="column">
+                                <img src="assets/Image/9.jpg" class="img-fluid" style="height: 260px;" alt="">
+                            </div>
+                            <div class="column">
+                                <img src="assets/Image/10.jpg" class="img-fluid" style="height: 260px;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-left: 5%; padding-right: 0%;">
+                        <h5 class="font-weight-light">Outdoor</h5>
+                        <h1>Seating Arrangement</h1>
+                        <ul class="text-secondary">
+                            <ol><span class="fa fa-check"></span> Select Sturdy Furniture</ol>
+                            <ol><span class="fa fa-check"></span> Decide How Loud is Too Loud</ol>
+                            <ol><span class="fa fa-check"></span> Select Appropriate Window Coverings</ol>
+                        </ul>
+                        <h3>₹599.00</h3>
+                        <button class="btn btn-danger rounded">Book a Table</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="form-group" id="Book" class="collapse" data-parent="#details">
+            <div class="container" style="padding: 1% 0 10%;">
+                <!-- <h6 class="font-weight-bold text-center">Reservation</h6> -->
+                <h2 class="display-4 font-weight-bold text-center pb-2">Book Your Table</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="text-block">
+                            <h2 class="pb-3 display-2">Open</h2>
+                            <div>
+                                <h3 class="display-5">Monday - Friday</h3>
+                                <ul class="display-7" style="list-style-type: none; padding-left: 2%;">
+                                    <li>4:30 PM - 10:30 PM </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="display-5">Saturday - Sunday</h3>
+                                <ul class="display-7" style="list-style-type: none; padding-left: 2%;">
+                                    <li>3:30 PM to 12:00 AM </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 font-weight-bold">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 input-wrap">
+                                    <label class="display-7">First Name</label>
+                                    <input type="text" class="display-7" name="firstname" placeholder="Enter Your First Name" required="">
+                                </div>
+                                <div class="col-lg-6 col-md-12 input-wrap">
+                                    <label class="display-7">Last Name</label>
+                                    <input type="text" class="field display-7" name="lastname" placeholder="Enter Your First Name" required="">
+                                </div>
+                                <div class="col-lg-6 col-md-12 input-wrap">
+                                    <label class="display-7">Contact Number</label>
+                                    <input type="text" class="field display-7" name="phone" placeholder="Your Number">
+                                </div>
+                                <div class="col-lg-6 col-md-12 input-wrap">
+                                    <label class="display-7">Mail Address</label>
+                                    <input type="email" class="field display-7" name="mail" placeholder="Your Mail ID">
+                                </div>
+                                <div class="col-lg-6 col-md-12 input-wrap">
+                                    <label class="display-7">Address</label>
+                                    <input type="text" class="field display-7" name="add" placeholder="Your Address">
+                                </div>
+                                <div class="col-lg-6 col-md-12 input-wrap">
+                                    <label class="display-7" for="form-1-phone">Party Size</label>
+                                    <input type="number" class="field display-7" name="party">
+                                </div>
+                                <div class="col-lg-6 col-md-12 input-wrap">
+                                    <label class="display-7">Date</label>
+                                    <input type="date" class="field display-7" name="date" required="">
+                                </div>
+                                <div class="col-lg-6 col-md-12 input-wrap">
+                                    <label class="display-7">Time</label>
+                                    <input type="time" name="time" class="field display-7">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-success display-4">Submit</button>
+                                    <button class="btn btn-danger display-4">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div style="position: absolute; top: 418%; left: 0px; width: 100%; height: 140%; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -100;">
+                <div style="background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat; background-image: url(&quot;assets/Image/pizza1.jpg&quot;); position: absolute; opacity: 0.6; top: 0px; left: 0px; width: 1349px; height: 902.846px; overflow: hidden; pointer-events: none; margin-left: 0px; margin-top: -270.423px; visibility: visible; transform: translate3d(0px, -135.788px, 0px);"></div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div style=" background-image: url(&quot;assets/Image/Pizza-Nacho.jpg&quot;); opacity: 0.8; background-repeat: no-repeat; color: rgb(240, 27, 3); padding: 50px 150px 50px 50px;">
+                        <h2 class="display-4 font-weight-bold">Best Food Forever, Check The Demo Video.</h2>
+                        <p class="font-weight-bold">Best place where cooked food is sold to the public, and where people sit down to eat it. It is also a place where people go to enjoy the time and to eat a meal.</p>
+                        <p class="font-weight-bold">These pizzalogy serve fast food, that is, inexpensive food, prepared and served quickly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tab text-center">
+                        <a href="https://www.youtube.com" target="_blank"><span class="fa fa-play"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h5 class="font-weight-light">Latest Combo</h5>
+                        <h1 class="dispaly-4 font-weight-bold">Awesome And Best Food Are Available</h1>
+                    </div>
+                </div>
+                <div class="row" style="padding: 3% 0%;">
+                    <div class="card-deck">
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/meal1.jpg" class="img-fluid" style="height: 240px;" alt="meal1">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Meal</h4>
+                                <h3 class="text-danger">₹520.00</h3>
+                                <button class="btn btn-outline-primary"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/combo-darkchoco.jpg" class="img-fluid" alt="combochoco">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Combo Choco</h4>
+                                <h3 class="text-danger">₹200.00</h3>
+                                <button class="btn btn-outline-primary"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/meal2.jpg" class="img-fluid" style="height: 240px;" alt="meal2">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Combo Meal</h4>
+                                <h3 class="text-danger">₹399.00</h3>
+                                <button class="btn btn-outline-primary"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-deck pt-3">
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/chocoballs.jpg" class="img-fluid" style="height: 240px;" alt="chocoball">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Choco Balls</h4>
+                                <h3 class="text-danger">₹120.00</h3>
+                                <button class="btn btn-outline-primary"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/chicken&amp;waffles.jpg" class="img-fluid" alt="chickenwaffles">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Chicken Waffles</h4>
+                                <h3 class="text-danger">₹120.00</h3>
+                                <button class="btn btn-outline-primary"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                        <div class="card" style="background:rgb(245, 255, 234);">
+                            <img src="assets/Image/chocolatemousse.jpg" class="img-fluid" alt="chocomouse">
+                            <div class="text-center" style="padding: 5% 0%; border: none;">
+                                <h4 class="text-primary">Choco Mousse</h4>
+                                <h3 class="text-danger">₹120.00</h3>
+                                <button class="btn btn-outline-primary"><a href="#" target="_self" class="text-primary">Order Now</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 2% 0%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h5 class="font-weight-light">Features</h5>
+                        <h1 style="margin:2% 0px 10%;">Our Serving Outstanding Features</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                            <div class="circle">
+                                <span class="fas fa-bullseye"></span>
+                            </div>
+                            <h3>Fashionable</h3>
+                            <ul class="text-secondary">
+                                <ol>Online Booking Table &amp; Order Food</ol>
+                                <ol>Offer Free Wi-Fi, Games at the Table</ol>
+                                <ol>Fix Problems Immediately</ol>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                            <div class="circle">
+                                <span class="fa fa-money-bill-alt"></span>
+                            </div>
+                            <h3>Easy Payment</h3>
+                            <ul class="text-secondary">
+                                <ol>Cash, Credit Card, Debit Card, Gift Card</ol>
+                                <ol>Online Pay- Google Pay, Paytm, PhonePe</ol>
+                            </ul>                        
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.8s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <div class="circle">
+                                <span class="fa fa-shopping-cart"></span>
+                            </div>
+                            <h3>Free Delivery</h3>
+                            <ul class="text-secondary">
+                                <ol>Best Food Packing</ol>
+                                <ol>Good Food Series</ol>
+                            </ul>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container form-group" id="Food" class="collapse" data-parent="#details">
+                <div class="row" >
+                    <div class="col-lg-9" style="padding: 2% 0%;">
+                        <div class="section-heading">
+                            <h5 class="font-weight-light">Contact Us</h5>
+                            <h1 class="font-weight-bold">Need Help? Feel Free To Contact With Us</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4" style="padding: 0% 2%;">
+                        <div class="wow fadeInLeft " data-wow-duration="2s" data-wow-delay="0.2s" style="color: rgb(231, 76, 60); visibility: visible; animation-duration: 2s; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <h2>Visit Our Restaurant<br><em class="small">by land or by sea</em></h2>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3" style="padding: 1% 2%;">
+                        <div class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.4s" style="color: rgb(231, 76, 60); visibility: visible; animation-duration: 2s; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h6>350 5th Ave, Aquet World <br> HY 10118, HYD</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3" style="padding: 0% 2%;">
+                        <div class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.6s" style="color: rgb(231, 76, 60); visibility: visible; animation-duration: 2s; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <table>
+                                <tbody><tr>
+                                    <td>
+                                        <img src="assets/Image/contactlogo.png"><br>
+                                    </td>
+                                    <td style="margin: 10px; padding: 20px;">
+                                        <h6>+88 98765 2345 <br> +88 98765 2345</h6>                                    
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2" style="padding: 1% 2%;">
+                        <div class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.6s" style="color: rgb(231, 76, 60); visibility: visible; animation-duration: 2s; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <a href="#" target="_self"><img src="assets/Image/google.png"></a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#" target="_self"><img src="assets/Image/twitter.png"></a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#" target="_self"><img src="assets/Image/facebook.png"></a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#" target="_self"><img src="assets/Image/pi.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="summary" class="card" style="display: none;">
+                <div class="card-header">
+                    <h3>Order Summary</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <colgroup span="1" style="background-color: lightcyan; font-weight: bold;"></colgroup>
+                        <tbody><tr>
+                            <td>Customer Name</td>
+                            <td id="lblName"></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td id="lblMobile"></td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                            <td id="lblDate"></td>
+                        </tr>
+                        <tr>
+                            <td>Selected Meal</td>
+                            <td id="lblMeal"></td>
+                        </tr>
+                        <tr>
+                            <td>Selected Food</td>
+                            <td id="lblFood"></td>
+                        </tr>
+                        <tr>
+                            <td>Selected Ad-On's</td>
+                            <td id="lblAdon"></td>
+                        </tr>
+                        <tr>
+                            <td>Selected Desert</td>
+                            <td id="lblDesert"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Amount</td>
+                            <td id="lblTotal"></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="card-footer">
+                    <button onclick="window.print()" class="btn btn-success">Print Bill</button>
+                    <button onclick="location.reload()" class="btn btn-primary">Back</button>
+                </div>
+            </div>
+            <div class="pt-4">
+                <div class="badge-dark" style="padding: 2% 0%;">
+                    <div class="container">
+                        <p class="text-center text-white font-weight-bold">© Copyright 2018. All Rights Reserved By <span class="text-danger"><a href="#">Pizzalogy</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+       
